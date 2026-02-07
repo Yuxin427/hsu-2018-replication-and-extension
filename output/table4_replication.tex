@@ -1,0 +1,29 @@
+\begin{table}[htbp]\centering
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\caption{Replication of Table 4: Unemployment Insurance Generosity and Mortgage Delinquency}
+\begin{tabular}{l*{3}{c}}
+\toprule
+                    &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}&\multicolumn{1}{c}{(3)}\\
+                    &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}&\multicolumn{1}{c}{(3)}\\
+\midrule
+Max Benefit         &       -0.03         &        0.01         &        0.00         \\
+                    &      (0.11)         &      (0.11)         &         (.)         \\
+\addlinespace
+Max Benefit $\times$ Layoff&                     &       -0.22\sym{***}&       -0.23\sym{***}\\
+                    &                     &      (0.08)         &      (0.08)         \\
+\addlinespace
+Layoff              &        6.49\sym{***}&        6.44\sym{***}&        6.43\sym{***}\\
+                    &      (0.35)         &      (0.32)         &      (0.33)         \\
+\midrule
+Observations        &      64,919         &      64,919         &      64,919         \\
+R$^2$               &        0.04         &        0.04         &        0.05         \\
+Household controls  &         Yes         &         Yes         &         Yes         \\
+State-year controls &         Yes         &         Yes         &         ---         \\
+State and year fixed effects&         Yes         &         Yes         &         ---         \\
+State-year fixed effects&          No         &          No         &         Yes         \\
+\bottomrule
+\multicolumn{4}{l}{\footnotesize Standard errors in parentheses}\\
+\multicolumn{4}{l}{\footnotesize Notes: The dependent variable is mortgage delinquency. Max Benefit is demeaned. Standard errors adjusted for clustering at the state level.}\\
+\multicolumn{4}{l}{\footnotesize \sym{*} \(p<0.10\), \sym{**} \(p<0.05\), \sym{***} \(p<0.01\)}\\
+\end{tabular}
+\end{table}

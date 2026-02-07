@@ -1,0 +1,25 @@
+\documentclass[]{article}
+\setlength{\pdfpagewidth}{8.5in} \setlength{\pdfpageheight}{11in}
+\begin{document}
+\begin{tabular}{lccc} \hline
+ & (1) & (2) & (3) \\
+VARIABLES & Auto loan 90+ & Credit card 90+ & Student loan 90+ \\ \hline
+ &  &  &  \\
+unemp\_rate & 0.401*** & 0.834*** & 0.171 \\
+ & (0.087) & (0.192) & (0.150) \\
+max\_ben\_demean & 0.231* & -0.010 & -0.318 \\
+ & (0.118) & (0.193) & (0.281) \\
+c.unemp\_rate\#c.max\_ben\_demean & -0.034*** & 0.010 & 0.018 \\
+ & (0.008) & (0.021) & (0.013) \\
+Constant & -0.109 & 3.964*** & 4.948*** \\
+ & (0.505) & (1.108) & (0.859) \\
+ &  &  &  \\
+Observations & 408 & 408 & 408 \\
+R-squared & 0.911 & 0.883 & 0.812 \\
+State FE & Yes & Yes & Yes \\
+Year FE & Yes & Yes & Yes \\
+ SE clustered by state & Yes & Yes & Yes \\ \hline
+\multicolumn{4}{c}{ Robust standard errors in parentheses} \\
+\multicolumn{4}{c}{ *** p$<$0.01, ** p$<$0.05, * p$<$0.1} \\
+\end{tabular}
+\end{document}
