@@ -24,7 +24,7 @@ clear all
 set more off
 
 * Load data
-use "C:\Users\Willi\Downloads\116160-V1\ui_econ_analysis.dta", clear
+use "ui_econ_analysis.dta", clear
 
 * Data processing:
 * - Use the original string variable "state" (two-letter abbreviation), which matches the map geometry
@@ -120,7 +120,7 @@ clear all
 set more off
 
 * Load data
-use "C:\Users\Willi\Downloads\116160-V1\ui_econ_analysis.dta", clear
+use "ui_econ_analysis.dta", clear
 
 * Variable labels to match the paper's wording in the exported table
 label variable unemp_rate "Unemployment rate (\%)"
@@ -198,7 +198,7 @@ clear all
 set more off
 
 * Load data
-use "C:\Users\Willi\Downloads\116160-V1\ui_sipp_analysis.dta", clear
+use "ui_sipp_analysis.dta", clear
 
 * Define controls
 global state_controls "unemp_rate ln_realgdp_percap wages_state ui_rr neg_ui_rr union_cov"
@@ -267,10 +267,10 @@ clear all
 set more off
 
 * Paths
-global uiecon   "C:\Users\Willi\Downloads\116160-V1\ui_econ_analysis.dta"
-global carxls   "C:\Users\Willi\Desktop\car.xlsx"
-global creditxls "C:\Users\Willi\Desktop\Credit.xlsx"
-global studentxls "C:\Users\Willi\Desktop\student.xlsx"
+global uiecon   "ui_econ_analysis.dta"
+global carxls   "car.xlsx"
+global creditxls "Credit.xlsx"
+global studentxls "student.xlsx"
 
 * Build state crosswalk: state abbreviation -> stcode (FIPS)
 clear
@@ -402,3 +402,4 @@ areg stud90 c.unemp_rate##c.max_ben_demean i.year, absorb(stcode) vce(cluster st
 outreg2 using "extension_table5.tex", append tex bdec(3) sdec(3) keep(unemp_rate max_ben_demean c.unemp_rate#c.max_ben_demean) addtext(State FE, Yes, Year FE, Yes, SE clustered by state, Yes) ctitle("Student loan 90+")
 
 display "Done. Extension table written to extension_table5.tex"
+
